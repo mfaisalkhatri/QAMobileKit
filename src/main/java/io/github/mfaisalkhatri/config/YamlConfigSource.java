@@ -29,12 +29,10 @@ public class YamlConfigSource implements ConfigSource {
             }
 
             return config;
-        } catch (YAMLException e) {
+        } catch (final YAMLException e) {
             throw new IllegalStateException ("Invalid YAML configuration in " + CONFIG_FILE, e);
         } catch (final Exception exception) {
-
             throw new IllegalStateException ("Error while loading configuration from " + CONFIG_FILE, exception);
         }
     }
 }
-
