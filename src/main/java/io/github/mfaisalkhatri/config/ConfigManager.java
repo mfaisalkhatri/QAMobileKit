@@ -12,4 +12,7 @@ public final class ConfigManager {
         final ConfigSource configSource = new YamlConfigSource ();
         frameworkConfig = configSource.loadConfig ();
     }
+
+    private ConfigManager () {
+    }
 }
