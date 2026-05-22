@@ -1,6 +1,7 @@
 package io.github.mfaisalkhatri.factory;
 
 import java.net.URI;
+import java.time.Duration;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -14,10 +15,10 @@ import io.github.mfaisalkhatri.model.ServerConfig;
 public final class DriverFactory {
     public static AndroidDriver createDriver (final DeviceConfig device) {
         try {
-            final FrameworkConfig config = ConfigManager.getFrameworkConfig ();
-            final AppConfig appConfig = config.getAppConfig ();
-            final ServerConfig serverConfig = config.getServerConfig ();
-            final ExecutionConfig executionConfig = config.getExecutionConfig ();
+            final FrameworkConfig config = ConfigManager.getConfig ();
+            final AppConfig appConfig = config.getApp ();
+            final ServerConfig serverConfig = config.getServer ();
+            final ExecutionConfig executionConfig = config.getExecution ();
             final UiAutomator2Options options = CapabilityFactory.getCapabilities (executionConfig, device, appConfig);
             return new AndroidDriver (URI.create (serverConfig.getUrl ())
                 .toURL (), options);

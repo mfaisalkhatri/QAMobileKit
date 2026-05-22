@@ -5,20 +5,12 @@ server:
   url: http://127.0.0.1:4723
 
 app:
-  appPackage: com.demo.app
-  appActivity: com.demo.app.MainActivity
-  appPath: apps/demo.apk
+  appPackage: com.wdiodemoapp
+  appActivity: com.wdiodemoapp.SplashActivity
+  appPath: app/webdriverio-app.apk
 
 devices:
 
-  - deviceName: Pixel_8
-    platformVersion: "14"
-    automationName: UiAutomator2
-
-  - deviceName: Samsung_S24
-    platformVersion: "14"
-    automationName: UiAutomator2
-
-  - deviceName: OnePlus_12
-    platformVersion: "13"
+  - deviceName: Pixel_10
+    platformVersion: "16"
     automationName: UiAutomator2

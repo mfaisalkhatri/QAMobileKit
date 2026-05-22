@@ -1,6 +1,6 @@
 package io.github.mfaisalkhatri.base;
 
-import java.sql.Driver;
+import java.time.Duration;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.github.mfaisalkhatri.config.ConfigManager;
@@ -16,8 +16,8 @@ public class BaseTest {
     @BeforeClass (alwaysRun = true)
     @Parameters ("device")
     public void setup (final String deviceName) {
-        final DeviceConfig deviceConfig = ConfigManager.getFrameworkConfig ()
-            .getDeviceConfigList ()
+        final DeviceConfig deviceConfig = ConfigManager.getConfig ()
+            .getDevices ()
             .stream ()
             .filter (d -> d.getDeviceName ()
                 .equalsIgnoreCase (deviceName))
@@ -33,4 +33,5 @@ public class BaseTest {
     public void tearDown () {
         DriverManager.quitDriver ();
     }
+
 }
