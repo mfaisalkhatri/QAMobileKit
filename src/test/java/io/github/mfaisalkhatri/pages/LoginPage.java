@@ -8,10 +8,10 @@ public class LoginPage extends BasePage {
     private final By emailField    = AppiumBy.accessibilityId ("input-email");
     private final By passwordField = AppiumBy.accessibilityId ("input-password");
     private final By loginButton   = AppiumBy.accessibilityId ("button-LOGIN");
-    private final By alertPopup    = AppiumBy.accessibilityId ("android:id/content");
-    private final By alertTitle    = AppiumBy.accessibilityId ("android:id/alertTitle");
-    private final By alertMessage  = AppiumBy.accessibilityId ("android:id/message");
-    private final By okButton      = AppiumBy.accessibilityId ("android:id/button1");
+    private final By alertPopup    = AppiumBy.id ("android:id/content");
+    private final By alertTitle    = AppiumBy.id ("android:id/alertTitle");
+    private final By alertMessage  = AppiumBy.id ("android:id/message");
+    private final By okButton      = AppiumBy.id ("android:id/button1");
 
     public void login (final String emailId, final String password) {
         type (this.emailField, emailId);
