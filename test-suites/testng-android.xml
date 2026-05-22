@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Appium Sample tests for Android">
-    <test name="WebDriverIO Android App Tests">
+<suite name="Appium Sample tests for Android" parallel="tests">
+    <test name="WebDriverIO Android App Tests on Pixel 10">
         <parameter name="device" value="Pixel_10"/>
         <classes>
             <class name="io.github.mfaisalkhatri.test.LoginTest">
@@ -11,4 +11,15 @@
             </class>
         </classes>
     </test>
+    <test name="WebDriverIO Android App Tests on Pixel 9 Pro">
+        <parameter name="device" value="Pixel_9_Pro"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.test.LoginTest">
+                <methods>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>

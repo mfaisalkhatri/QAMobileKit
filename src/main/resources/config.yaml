@@ -14,3 +14,6 @@ devices:
   - deviceName: Pixel_10
     platformVersion: "16"
     automationName: UiAutomator2
+  - deviceName: Pixel_9_Pro
+    platformVersion: "15"
+    automationName: UiAutomator2
