@@ -6,11 +6,11 @@ import lombok.Getter;
 public final class ConfigManager {
 
     @Getter
-    private static final FrameworkConfig frameworkConfig;
+    private static final FrameworkConfig config;
 
     static {
         final ConfigSource configSource = new YamlConfigSource ();
-        frameworkConfig = configSource.loadConfig ();
+        config = configSource.loadConfig ();
     }
 
     private ConfigManager () {

@@ -8,8 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FrameworkConfig {
-    private ExecutionConfig    executionConfig;
-    private ServerConfig       serverConfig;
-    private AppConfig          appConfig;
-    private List<DeviceConfig> deviceConfigList;
+    private ExecutionConfig execution;
+    private ServerConfig       server;
+    private AppConfig          app;
+    private List<DeviceConfig> devices;
 }
